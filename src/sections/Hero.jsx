@@ -134,13 +134,13 @@ function Hero({ language }) {
           </a>
 
           <a
-            href="/cv.pdf"
-            target="_blank"
-            rel="noreferrer"
-            className="whitespace-nowrap rounded-full border border-white/20 bg-white/10 px-6 py-4 text-center font-extrabold backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:border-cyan-300/40 hover:bg-white/15"
-          >
-            {content.cv}
-          </a>
+  href={language === "el" ? "/cv-el.pdf" : "/cv-en.pdf"}
+  target="_blank"
+  rel="noreferrer"
+  className="whitespace-nowrap rounded-full border border-white/20 bg-white/10 px-6 py-4 text-center font-extrabold backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:border-cyan-300/40 hover:bg-white/15"
+>
+  {content.cv}
+</a>
         </div>
       </motion.div>
 
