@@ -63,9 +63,9 @@ const contactTranslations = {
 const contactLinks = [
   {
     id: "email",
-    href: "mailto:dimmathimat@gmail.com",
+    href: "mailto:lamprou08@gmail.com",
     icon: FaEnvelope,
-    value: "dimmathimat@gmail.com",
+    value: "lamprou08@gmail.com",
     labelKey: "emailLabel",
     descriptionKey: "emailDescription",
   },
