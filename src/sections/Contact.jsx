@@ -113,7 +113,7 @@ function Contact({ language }) {
       className="scroll-mt-28"
     >
       <FadeInSection direction="up">
-        <section className="relative overflow-hidden bg-slate-950 px-8 py-28 text-white md:px-24">
+        <section className="relative overflow-hidden px-6 py-24 text-white sm:px-8 md:px-16 md:py-28 xl:px-24">
           <div className="pointer-events-none absolute left-[-140px] top-24 h-80 w-80 rounded-full bg-cyan-500/10 blur-3xl" />
 
           <div className="pointer-events-none absolute bottom-[-80px] right-[-120px] h-96 w-96 rounded-full bg-violet-600/15 blur-3xl" />

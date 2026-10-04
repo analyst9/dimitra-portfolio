@@ -9,12 +9,30 @@ body,
 }
 
 body {
-  font-family: Inter, Arial, sans-serif;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
   background: #020617;
   color: white;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 110px;
+  scroll-padding-top: 100px;
+}
+
+::selection {
+  background: rgba(34, 211, 238, 0.35);
+  color: white;
+}
+
+:focus-visible {
+  outline: 2px solid #67e8f9;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }

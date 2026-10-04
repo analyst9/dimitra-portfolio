@@ -106,7 +106,7 @@ function Research({ language }) {
     <FadeInSection direction="right">
       <section
         id="research"
-        className="relative scroll-mt-28 overflow-hidden bg-slate-950 px-8 py-28 text-white md:px-24"
+        className="relative overflow-hidden px-6 py-24 text-white sm:px-8 md:px-16 md:py-28 xl:px-24"
       >
         <div className="pointer-events-none absolute bottom-12 left-[-160px] h-80 w-80 rounded-full bg-cyan-500/10 blur-3xl" />
 

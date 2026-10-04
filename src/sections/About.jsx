@@ -1,4 +1,3 @@
-import profileImg from "../assets/profile.jpg";
 import FadeInSection from "../components/FadeInSection";
 
 const aboutTranslations = {
@@ -13,6 +12,12 @@ const aboutTranslations = {
       "Είμαι υποψήφια διδάκτορας στο Τμήμα Ψηφιακών Συστημάτων του Πανεπιστημίου Θεσσαλίας. Η έρευνά μου επικεντρώνεται στην Τεχνητή Νοημοσύνη στην Εκπαίδευση, στα Learning Analytics, στα ευφυή συστήματα υποστήριξης αποφάσεων και στην ακαδημαϊκή συμβουλευτική.",
     paragraph3:
       "Συνδυάζω την ερευνητική μου δραστηριότητα με την εμπειρία μου στην εκπαίδευση και την ανάλυση δεδομένων, με στόχο τη δημιουργία λύσεων που μετατρέπουν τα δεδομένα σε γνώση και υποστηρίζουν την εκπαιδευτική καινοτομία.",
+    stats: [
+      { value: "2", label: "Μεταπτυχιακοί τίτλοι (ΕΜΠ, ΟΠΑ)" },
+      { value: "7+", label: "Χρόνια επαγγελματικής εμπειρίας" },
+      { value: "3", label: "Επιστημονικές δημοσιεύσεις" },
+      { value: "C2 · C1", label: "Αγγλικά · Ιταλικά" },
+    ],
     cards: [
       {
         icon: "🎓",
@@ -48,6 +53,12 @@ const aboutTranslations = {
       "I am currently pursuing a PhD in the Department of Digital Systems at the University of Thessaly. My research focuses on Artificial Intelligence in Education, Learning Analytics, intelligent decision-support systems and academic advising.",
     paragraph3:
       "I combine my research activity with my experience in education and data analytics to develop solutions that transform data into knowledge and support educational innovation.",
+    stats: [
+      { value: "2", label: "MSc degrees (NTUA, AUEB)" },
+      { value: "7+", label: "Years of professional experience" },
+      { value: "3", label: "Scientific publications" },
+      { value: "C2 · C1", label: "English · Italian" },
+    ],
     cards: [
       {
         icon: "🎓",
@@ -80,7 +91,7 @@ function About({ language }) {
     <FadeInSection direction="left">
       <section
         id="about"
-        className="relative scroll-mt-28 overflow-hidden bg-slate-950 px-8 py-28 text-white md:px-24"
+        className="relative scroll-mt-28 overflow-hidden px-6 py-24 text-white sm:px-8 md:px-16 md:py-28 xl:px-24"
       >
         <div className="absolute left-[-120px] top-20 h-72 w-72 rounded-full bg-cyan-500/10 blur-3xl" />
 
@@ -102,14 +113,20 @@ function About({ language }) {
           </div>
 
           <div className="mb-16 grid items-center gap-12 lg:grid-cols-[380px_1fr]">
-            <div className="relative mx-auto">
-              <div className="absolute inset-0 rounded-[40px] bg-gradient-to-br from-cyan-400/30 to-violet-600/30 blur-2xl" />
-
-              <img
-                src={profileImg}
-                alt="Dimitra Lamprou"
-                className="relative h-[470px] w-[360px] rounded-[40px] border border-white/15 object-cover object-top shadow-2xl"
-              />
+            <div className="grid grid-cols-2 gap-4">
+              {content.stats.map((stat) => (
+                <div
+                  key={stat.label}
+                  className="rounded-[28px] border border-white/10 bg-gradient-to-br from-cyan-400/[0.08] to-violet-500/[0.08] p-6"
+                >
+                  <p className="bg-gradient-to-r from-cyan-300 to-violet-300 bg-clip-text text-3xl font-black text-transparent md:text-4xl">
+                    {stat.value}
+                  </p>
+                  <p className="mt-2 text-sm font-semibold leading-6 text-slate-300">
+                    {stat.label}
+                  </p>
+                </div>
+              ))}
             </div>
 
             <div className="rounded-[36px] border border-white/10 bg-white/[0.06] p-8 shadow-2xl backdrop-blur-xl md:p-12">
