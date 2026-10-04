@@ -7,6 +7,7 @@ import CV from "./sections/CV";
 import Research from "./sections/Research";
 import Projects from "./sections/Projects";
 import Publications from "./sections/Publications";
+import Services from "./sections/Services";
 import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
 
@@ -60,6 +61,7 @@ function App() {
           <Research language={language} />
           <Projects language={language} />
           <Publications language={language} />
+          <Services language={language} />
           <Contact language={language} />
         </main>
 

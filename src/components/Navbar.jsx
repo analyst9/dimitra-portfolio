@@ -12,6 +12,7 @@ const navbarTranslations = {
     research: "Έρευνα",
     projects: "Έργα",
     publications: "Δημοσιεύσεις",
+    services: "Υπηρεσίες",
     contact: "Επικοινωνία",
     openMenu: "Άνοιγμα μενού",
     closeMenu: "Κλείσιμο μενού",
@@ -23,6 +24,7 @@ const navbarTranslations = {
     research: "Research",
     projects: "Projects",
     publications: "Publications",
+    services: "Services",
     contact: "Contact",
     openMenu: "Open menu",
     closeMenu: "Close menu",
@@ -36,6 +38,7 @@ const sectionIds = [
   "research",
   "projects",
   "publications",
+  "services",
   "contact",
 ];
 

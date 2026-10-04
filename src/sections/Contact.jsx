@@ -17,7 +17,7 @@ const contactTranslations = {
     label: "ΕΠΙΚΟΙΝΩΝΙΑ",
     title: "Ας επικοινωνήσουμε",
     intro:
-      "Είμαι διαθέσιμη για ερευνητικές συνεργασίες, ακαδημαϊκές προτάσεις και έργα που συνδέουν την Τεχνητή Νοημοσύνη, τα Δεδομένα και την Εκπαίδευση.",
+      "Είμαι διαθέσιμη για ερευνητικές συνεργασίες, ακαδημαϊκές προτάσεις, έργα που συνδέουν την Τεχνητή Νοημοσύνη, τα Δεδομένα και την Εκπαίδευση, καθώς και για την κατασκευή επαγγελματικών ιστοσελίδων.",
     cardTitle: "Επικοινωνία και ακαδημαϊκό προφίλ",
     cardText:
       "Μπορείτε να επικοινωνήσετε μαζί μου μέσω email ή να επισκεφθείτε τα επαγγελματικά και ακαδημαϊκά προφίλ μου.",
@@ -40,7 +40,7 @@ const contactTranslations = {
     label: "CONTACT",
     title: "Let's connect",
     intro:
-      "I am open to research collaborations, academic opportunities and projects that connect Artificial Intelligence, Data and Education.",
+      "I am open to research collaborations, academic opportunities, projects that connect Artificial Intelligence, Data and Education, and professional website design.",
     cardTitle: "Contact and academic profiles",
     cardText:
       "You can contact me directly by email or visit my professional and academic profiles.",

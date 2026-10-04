@@ -16,6 +16,7 @@ npm run lint
 | What | File |
 | --- | --- |
 | CV (education, experience, skills, languages) | `src/content/cv.js` |
+| Website-design services (Υπηρεσίες) | `src/sections/Services.jsx` |
 | Hero / About / Research / Projects / Publications / Contact | `src/sections/*.jsx` (texts at the top of each file, EL + EN) |
 | Navigation labels | `src/components/Navbar.jsx` |
 | SEO meta tags | `index.html` |

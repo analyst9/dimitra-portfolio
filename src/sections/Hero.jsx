@@ -14,6 +14,7 @@ const heroTranslations = {
       "Πληροφορικός",
       "Μαθηματικός",
       "Υποψήφια Διδάκτορας",
+      "Δημιουργός Ιστοσελίδων",
     ],
     motto:
       "Μετασχηματίζοντας την Εκπαίδευση μέσα από την Τεχνητή Νοημοσύνη, τα Μαθηματικά και τα Δεδομένα.",
@@ -31,6 +32,7 @@ const heroTranslations = {
       "Computer Scientist",
       "Mathematician",
       "PhD Candidate",
+      "Web Designer",
     ],
     motto:
       "Transforming Education through Artificial Intelligence, Mathematics and Data.",
@@ -164,7 +166,7 @@ function Hero({ language }) {
         }}
       >
         <motion.div
-          className="relative w-full max-w-[300px] sm:max-w-[360px] lg:max-w-[430px]"
+          className="relative w-full max-w-[240px] sm:max-w-[280px] lg:max-w-[320px]"
           animate={{
             y: [0, -12, 0],
             rotate: [0, 0.5, 0],
@@ -175,15 +177,15 @@ function Hero({ language }) {
             ease: "easeInOut",
           }}
         >
-          <div className="absolute inset-0 rounded-[44px] bg-cyan-400/20 blur-3xl" />
+          <div className="absolute inset-0 rounded-[36px] bg-cyan-400/20 blur-3xl" />
 
           <img
             src={heroImg}
             alt="Dimitra Lamprou"
-            width="430"
-            height="560"
+            width="444"
+            height="514"
             fetchPriority="high"
-            className="relative aspect-[43/56] w-full rounded-[44px] border border-white/10 object-cover object-top shadow-[0_25px_80px_rgba(34,211,238,0.18)]"
+            className="relative aspect-[444/514] w-full rounded-[36px] border border-white/10 object-cover object-center shadow-[0_25px_80px_rgba(34,211,238,0.18)]"
           />
         </motion.div>
       </motion.div>
