@@ -29,7 +29,6 @@ const projectTranslations = {
         status: "Ανάπτυξη",
       },
     ],
-    view: "Περισσότερα",
   },
 
   en: {
@@ -60,7 +59,6 @@ const projectTranslations = {
         status: "Development",
       },
     ],
-    view: "View Project",
   },
 };
 
@@ -71,7 +69,7 @@ function Projects({ language }) {
     <FadeInSection direction="up">
      <section
       id="projects"
-      className="relative overflow-hidden bg-slate-950 px-8 py-28 text-white md:px-24"
+      className="relative scroll-mt-28 overflow-hidden px-6 py-24 text-white sm:px-8 md:px-16 md:py-28 xl:px-24"
     >
       <div className="absolute bottom-[-120px] left-[-100px] h-80 w-80 rounded-full bg-cyan-500/10 blur-3xl" />
 
@@ -94,7 +92,7 @@ function Projects({ language }) {
           {content.projects.map((project, index) => (
             <article
               key={project.title}
-              className="group flex min-h-[430px] flex-col rounded-[30px] border border-white/10 bg-white/[0.05] p-8 backdrop-blur-xl transition duration-300 hover:-translate-y-2 hover:border-cyan-300/30 hover:shadow-[0_0_55px_rgba(34,211,238,0.12)]"
+              className="group flex flex-col rounded-[30px] border border-white/10 bg-white/[0.05] p-8 backdrop-blur-xl transition duration-300 hover:-translate-y-2 hover:border-cyan-300/30 hover:shadow-[0_0_55px_rgba(34,211,238,0.12)]"
             >
               <div className="mb-8 flex items-center justify-between">
                 <span className="text-sm font-extrabold tracking-[0.25em] text-cyan-300">
@@ -106,7 +104,7 @@ function Projects({ language }) {
                 </span>
               </div>
 
-              <h3 className="mb-5 text-3xl font-extrabold">
+              <h3 className="mb-5 text-2xl font-extrabold leading-tight md:text-3xl">
                 {project.title}
               </h3>
 
@@ -114,7 +112,7 @@ function Projects({ language }) {
                 {project.description}
               </p>
 
-              <div className="mb-10 flex flex-wrap gap-3">
+              <div className="mt-auto flex flex-wrap gap-3">
                 {project.tags.map((tag) => (
                   <span
                     key={tag}
@@ -125,13 +123,6 @@ function Projects({ language }) {
                 ))}
               </div>
 
-              <button
-                type="button"
-                className="mt-auto flex items-center gap-3 self-start font-extrabold text-cyan-300 transition group-hover:gap-5"
-              >
-                {content.view}
-                <span aria-hidden="true">→</span>
-              </button>
             </article>
           ))}
         </div>

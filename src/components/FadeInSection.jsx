@@ -6,10 +6,10 @@ function FadeInSection({
   direction = "up",
 }) {
   const variants = {
-    up: { opacity: 0, y: 60 },
-    down: { opacity: 0, y: -60 },
-    left: { opacity: 0, x: 60 },
-    right: { opacity: 0, x: -60 },
+    up: { opacity: 0, y: 40 },
+    down: { opacity: 0, y: -40 },
+    left: { opacity: 0, x: 40 },
+    right: { opacity: 0, x: -40 },
   };
 
   return (
@@ -22,10 +22,10 @@ function FadeInSection({
       }}
       viewport={{
         once: true,
-        amount: 0.2,
+        amount: 0.08,
       }}
       transition={{
-        duration: 0.8,
+        duration: 0.7,
         delay,
         ease: "easeOut",
       }}

@@ -1,16 +1,24 @@
-# React + Vite
+# dimitralamprou.com
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal academic portfolio built with React + Vite + Tailwind CSS v4 + Framer Motion, deployed on Vercel.
 
-Currently, two official plugins are available:
+## Commands
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```bash
+npm install
+npm run dev      # local development
+npm run build    # production build (dist/)
+npm run lint
+```
 
-## React Compiler
+## Where to edit content
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| What | File |
+| --- | --- |
+| CV (education, experience, skills, languages) | `src/content/cv.js` |
+| Website-design services (Υπηρεσίες) | `src/sections/Services.jsx` |
+| Hero / About / Research / Projects / Publications / Contact | `src/sections/*.jsx` (texts at the top of each file, EL + EN) |
+| Navigation labels | `src/components/Navbar.jsx` |
+| SEO meta tags | `index.html` |
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The site is bilingual (EL/EN). The selected language is remembered in the browser, and first-time visitors get the language of their browser.

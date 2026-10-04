@@ -17,7 +17,7 @@ const contactTranslations = {
     label: "ΕΠΙΚΟΙΝΩΝΙΑ",
     title: "Ας επικοινωνήσουμε",
     intro:
-      "Είμαι διαθέσιμη για ερευνητικές συνεργασίες, ακαδημαϊκές προτάσεις και έργα που συνδέουν την Τεχνητή Νοημοσύνη, τα Δεδομένα και την Εκπαίδευση.",
+      "Είμαι διαθέσιμη για ερευνητικές συνεργασίες, ακαδημαϊκές προτάσεις, έργα που συνδέουν την Τεχνητή Νοημοσύνη, τα Δεδομένα και την Εκπαίδευση, καθώς και για την κατασκευή επαγγελματικών ιστοσελίδων.",
     cardTitle: "Επικοινωνία και ακαδημαϊκό προφίλ",
     cardText:
       "Μπορείτε να επικοινωνήσετε μαζί μου μέσω email ή να επισκεφθείτε τα επαγγελματικά και ακαδημαϊκά προφίλ μου.",
@@ -40,7 +40,7 @@ const contactTranslations = {
     label: "CONTACT",
     title: "Let's connect",
     intro:
-      "I am open to research collaborations, academic opportunities and projects that connect Artificial Intelligence, Data and Education.",
+      "I am open to research collaborations, academic opportunities, projects that connect Artificial Intelligence, Data and Education, and professional website design.",
     cardTitle: "Contact and academic profiles",
     cardText:
       "You can contact me directly by email or visit my professional and academic profiles.",
@@ -113,7 +113,7 @@ function Contact({ language }) {
       className="scroll-mt-28"
     >
       <FadeInSection direction="up">
-        <section className="relative overflow-hidden bg-slate-950 px-8 py-28 text-white md:px-24">
+        <section className="relative overflow-hidden px-6 py-24 text-white sm:px-8 md:px-16 md:py-28 xl:px-24">
           <div className="pointer-events-none absolute left-[-140px] top-24 h-80 w-80 rounded-full bg-cyan-500/10 blur-3xl" />
 
           <div className="pointer-events-none absolute bottom-[-80px] right-[-120px] h-96 w-96 rounded-full bg-violet-600/15 blur-3xl" />

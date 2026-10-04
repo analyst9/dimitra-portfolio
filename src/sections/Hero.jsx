@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import heroImg from "../assets/profile.jpg";
+import { scrollToSection } from "../utils/scroll";
 
 const heroTranslations = {
   el: {
@@ -13,11 +14,12 @@ const heroTranslations = {
       "Πληροφορικός",
       "Μαθηματικός",
       "Υποψήφια Διδάκτορας",
+      "Δημιουργός Ιστοσελίδων",
     ],
     motto:
       "Μετασχηματίζοντας την Εκπαίδευση μέσα από την Τεχνητή Νοημοσύνη, τα Μαθηματικά και τα Δεδομένα.",
     explore: "Εξερεύνησε το έργο μου",
-    cv: "Λήψη Βιογραφικού",
+    cv: "Δες το Βιογραφικό",
   },
 
   en: {
@@ -30,11 +32,12 @@ const heroTranslations = {
       "Computer Scientist",
       "Mathematician",
       "PhD Candidate",
+      "Web Designer",
     ],
     motto:
       "Transforming Education through Artificial Intelligence, Mathematics and Data.",
     explore: "Explore My Work",
-    cv: "Download CV",
+    cv: "View CV",
   },
 };
 
@@ -92,7 +95,7 @@ function Hero({ language }) {
   return (
     <section
       id="home"
-      className="grid min-h-screen scroll-mt-28 grid-cols-1 items-center gap-12 px-8 pb-16 pt-32 md:grid-cols-2 md:px-24"
+      className="mx-auto grid min-h-[100svh] max-w-7xl grid-cols-1 items-center gap-12 px-6 pb-16 pt-28 sm:px-8 md:grid-cols-[1.1fr_0.9fr] md:pt-32 lg:gap-16"
     >
       <motion.div
         initial={{ opacity: 0, x: -40 }}
@@ -102,11 +105,11 @@ function Hero({ language }) {
           ease: "easeOut",
         }}
       >
-        <p className="mb-5 text-xl font-bold text-cyan-100">
+        <p className="mb-4 text-lg font-bold text-cyan-100 md:text-xl">
           {content.hello}
         </p>
 
-        <h1 className="mb-6 text-6xl font-black leading-tight md:text-8xl">
+        <h1 className="mb-6 text-5xl font-black leading-[1.05] sm:text-6xl lg:text-7xl xl:text-8xl">
           <span className="bg-gradient-to-r from-white via-cyan-100 to-violet-300 bg-clip-text text-transparent">
             {content.firstName}
             <br />
@@ -114,33 +117,42 @@ function Hero({ language }) {
           </span>
         </h1>
 
-        <h2 className="mb-6 min-h-[70px] text-4xl font-extrabold text-cyan-300 md:text-5xl">
+        <p
+          aria-live="off"
+          className="mb-6 min-h-[84px] text-2xl font-extrabold leading-tight text-cyan-300 sm:min-h-[48px] sm:text-3xl lg:text-4xl"
+        >
           {typedText}
           <span className="ml-1 animate-pulse text-cyan-200">
             |
           </span>
-        </h2>
+        </p>
 
-        <p className="mb-8 max-w-xl text-xl leading-relaxed text-slate-200">
+        <p className="mb-8 max-w-xl text-lg leading-relaxed text-slate-200 md:text-xl">
           {content.motto}
         </p>
 
-        <div className="flex flex-wrap items-center gap-4 sm:flex-nowrap">
+        <div className="flex flex-wrap items-center gap-4">
           <a
             href="#about"
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToSection("about");
+            }}
             className="whitespace-nowrap rounded-full bg-gradient-to-r from-cyan-500 to-violet-600 px-6 py-4 text-center font-extrabold shadow-[0_10px_35px_rgba(34,211,238,0.2)] transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_15px_40px_rgba(34,211,238,0.35)]"
           >
             {content.explore}
           </a>
 
           <a
-  href={language === "el" ? "/cv-el.pdf" : "/cv-en.pdf"}
-  target="_blank"
-  rel="noreferrer"
-  className="whitespace-nowrap rounded-full border border-white/20 bg-white/10 px-6 py-4 text-center font-extrabold backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:border-cyan-300/40 hover:bg-white/15"
->
-  {content.cv}
-</a>
+            href="#cv"
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToSection("cv");
+            }}
+            className="whitespace-nowrap rounded-full border border-white/20 bg-white/10 px-6 py-4 text-center font-extrabold backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:border-cyan-300/40 hover:bg-white/15"
+          >
+            {content.cv}
+          </a>
         </div>
       </motion.div>
 
@@ -154,7 +166,7 @@ function Hero({ language }) {
         }}
       >
         <motion.div
-          className="relative"
+          className="relative w-full max-w-[240px] sm:max-w-[280px] lg:max-w-[320px]"
           animate={{
             y: [0, -12, 0],
             rotate: [0, 0.5, 0],
@@ -165,12 +177,15 @@ function Hero({ language }) {
             ease: "easeInOut",
           }}
         >
-          <div className="absolute inset-0 rounded-[44px] bg-cyan-400/20 blur-3xl" />
+          <div className="absolute inset-0 rounded-[36px] bg-cyan-400/20 blur-3xl" />
 
           <img
             src={heroImg}
             alt="Dimitra Lamprou"
-            className="relative h-[560px] w-[430px] rounded-[44px] border border-white/10 object-cover object-top shadow-[0_25px_80px_rgba(34,211,238,0.18)]"
+            width="444"
+            height="514"
+            fetchPriority="high"
+            className="relative aspect-[444/514] w-full rounded-[36px] border border-white/10 object-cover object-center shadow-[0_25px_80px_rgba(34,211,238,0.18)]"
           />
         </motion.div>
       </motion.div>
